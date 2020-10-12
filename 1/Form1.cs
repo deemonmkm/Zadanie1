@@ -25,6 +25,7 @@ namespace _1
 		{
 			string tarif = null;
 			string option = null;
+			string msg = null;
 
 			if (radioButton1.Checked) tarif = "100";
 			if (radioButton2.Checked) tarif = "200";
@@ -39,8 +40,9 @@ namespace _1
 			if (checkBox4.Checked) option = option + "Расширенный пакет СМС" + "\n";
 			if (checkBox5.Checked) option = option + "Локатор" + "\n";
 			if (checkBox6.Checked) option = option + "Запрет подписок" + "\n";
+			if (option != null) msg = "c опциями:\n";
 
-			MessageBox.Show("Вы подключили тариф " + tarif + " c опциями:\n" + option);	
+			MessageBox.Show("Вы подключили тариф " + tarif + " " + msg + option);	
 		}
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
